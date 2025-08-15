@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zhengyang Shan — Personal Website</title>
+  <meta name="description" content="PhD student at Boston University. Fairness, interpretability, and evaluation of LLMs.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Zhengyang Shan</a>
+      <nav class="nav">
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#about">About</a>
+      </nav>
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌓</button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="waves" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="card profile">
+          <img class="avatar" src="assets/headshot-placeholder.jpg" alt="Your headshot">
+          <h1 class="name">Zhengyang Shan</h1>
+          <p class="role">PhD Student</p>
+          <p class="org">Boston University · Computing & Data Sciences</p>
+          <div class="links">
+            <a href="#" class="icon-btn" title="Google Scholar" aria-label="Google Scholar">🔎</a>
+            <a href="#" class="icon-btn" title="GitHub" aria-label="GitHub">🐙</a>
+            <a href="#" class="icon-btn" title="LinkedIn" aria-label="LinkedIn">in</a>
+            <a href="mailto:you@bu.edu" class="icon-btn" title="Email" aria-label="Email">✉️</a>
+            <a href="#" class="cta">Download CV</a>
+          </div>
+        </div>
+        <div class="card summary">
+          <p>
+            I am a PhD student at Boston University advised by Prof. Margrit Betke and Prof. Derry Wijaya. 
+            My research focuses on fairness, interpretability, and evaluation of large language models, with an emphasis on how demographic attributes are represented and their potential misuse.
+          </p>
+          <p class="muted">My long-term vision is to build robust, bias‑aware language technologies that remain transparent and accountable under distribution shift.</p>
+
+          <h3>Interests</h3>
+          <ul class="chips">
+            <li>LLM Fairness & Inclusivity</li>
+            <li>Interpretability & Sparse Features</li>
+            <li>Evaluation & Robustness</li>
+            <li>Bounded Personalization</li>
+          </ul>
+
+          <h3>Education</h3>
+          <ul class="edu">
+            <li><strong>PhD, Computing & Data Sciences</strong> — Boston University (ongoing). Advisors: Margrit Betke, Derry Wijaya.</li>
+            <li><strong>BSc/MS</strong> — Previous Institution. Thesis/awards optional.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="section">
+      <div class="container">
+        <h2>Recent News</h2>
+        <article class="news-item">
+          <time>Jul 30, 2025</time>
+          <div>
+            <a href="#">(New) ACL 2025 paper camera‑ready posted</a>
+            <p class="muted">Our paper on gender inclusivity in LLMs (GIFI) is now camera‑ready. Code and data soon.</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <time>Mar 18, 2025</time>
+          <div>
+            <a href="#">Extended results for bias‑aware personalization released</a>
+            <p class="muted">RAG++ with bounded personalization draft available on arXiv.</p>
+          </div>
+        </article>
+        <article class="news-item">
+          <time>Nov 30, 2024</time>
+          <div>
+            <a href="#">NeurIPS workshop talk on interpretability</a>
+            <p class="muted">Presented SAE-based analyses for demographic features.</p>
+          </div>
+        </article>
+        <div class="center"><a href="#" class="btn">See all</a></div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="container">
+        <h2>Recent Publications</h2>
+        <ol class="pubs">
+          <li>
+            <div class="meta">Z. Shan, et al. (2025).</div>
+            <div class="title">Measuring Gender Inclusivity in LLMs: A Holistic Framework and the GIFI Metric.</div>
+            <div class="venue">ACL 2025.</div>
+            <div class="links-row"><a href="#">PDF</a> · <a href="#">CODE</a></div>
+          </li>
+          <li>
+            <div class="meta">Z. Shan, et al. (2024).</div>
+            <div class="title">Attribution vs. Correlation Under Sparse Auto-Encoders: Demographic Features in LLMs.</div>
+            <div class="venue">NeurIPS 2024 Workshop.</div>
+            <div class="links-row"><a href="#">PDF</a> · <a href="#">CODE</a></div>
+          </li>
+          <li>
+            <div class="meta">Z. Shan, et al. (2024).</div>
+            <div class="title">Bias-Aware Personalization for RAG Systems.</div>
+            <div class="venue">Preprint.</div>
+            <div class="links-row"><a href="#">PDF</a> · <a href="#">CODE</a></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="teaching" class="section">
+      <div class="container">
+        <h2>Teaching</h2>
+        <div class="cards-2">
+          <div class="card">
+            <p class="strong">Teaching Fellow, Math‑N‑Code Workshop</p>
+            <p class="muted">Module 1 & 2 support • 2025</p>
+          </div>
+          <div class="card">
+            <p class="strong">Guest Lecture, Fairness in LLMs</p>
+            <p class="muted">Interpretability & Robustness • 2024–2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          I study how demographic cues are encoded in language models and how these cues propagate into downstream predictions. 
+          My work combines attribution and ablation in sparse feature spaces to reveal mechanisms behind biased behavior, and explores bounded personalization to keep user‑adaptive systems safe.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Zhengyang Shan</div>
+      <div class="footer-links">
+        <a href="#">Scholar</a>
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="mailto:you@bu.edu">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
