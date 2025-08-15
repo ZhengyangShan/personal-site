@@ -1,11 +1,1 @@
-// Simple dark mode + current year
-const btn = document.getElementById('themeToggle');
-const root = document.documentElement;
-const key = 'prefers-dark';
-const saved = localStorage.getItem(key);
-if (saved === 'true') root.classList.add('dark');
-btn?.addEventListener('click', () => {
-  root.classList.toggle('dark');
-  localStorage.setItem(key, root.classList.contains('dark') ? 'true' : 'false');
-});
-document.getElementById('year').textContent = new Date().getFullYear();
+const btn=document.getElementById('themeToggle');const root=document.documentElement;const key='prefers-dark';const saved=localStorage.getItem(key);if(saved==='true')root.classList.add('dark');btn?.addEventListener('click',()=>{root.classList.toggle('dark');localStorage.setItem(key,root.classList.contains('dark')?'true':'false');});document.getElementById('year').textContent=new Date().getFullYear();
