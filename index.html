@@ -57,14 +57,26 @@
     border-radius:999px; border:1px solid var(--line); background:#fff0; box-shadow:none}
   .icon-btn:hover{box-shadow:0 6px 14px rgba(0,0,0,.12)}
 
-  .intro{font-size:22px; line-height:1.6}
+  .intro{font-size:20px; line-height:1.6}
   .intro .strong{font-weight:800}
   .muted{color:var(--muted); font-size:20px}
 
   .h2{font-size:28px; font-weight:800; margin:22px 0 12px}
   .chips{display:flex; flex-wrap:wrap; gap:12px; padding:0; margin:0}
   .chip{list-style:none; padding:10px 16px; border-radius:999px; background:var(--chip);
-    border:1px solid var(--line); font-weight:600}
+    border:1px solid var(--line); font-weight:600
+
+  .social .icon-btn {
+    font-size: 1.4rem;
+    color: #333;
+    margin: 0 6px;
+    text-decoration: none;
+  }
+  .social .icon-btn:hover {
+    color: #0077b5;
+  }
+
+
 
   /* Sections */
   .section{padding:34px 0}
@@ -130,11 +142,20 @@
       <p class="role">PhD Student</p>
       <p class="org">Boston University (CDS)</p>
       <div class="social">
-        <a class="icon-btn" href="https://scholar.google.com" title="Google Scholar" aria-label="Google Scholar">🔎</a>
-        <a class="icon-btn" href="https://github.com/zhengyangshan" title="GitHub" aria-label="GitHub">🐙</a>
-        <a class="icon-btn" href="https://www.linkedin.com" title="LinkedIn" aria-label="LinkedIn">in</a>
-        <a class="icon-btn" href="mailto:you@bu.edu" title="Email" aria-label="Email">✉️</a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/zhengyang-shan-92b5381aa"
+           title="LinkedIn" aria-label="LinkedIn" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a class="icon-btn" href="mailto:shanzy@bu.edu"
+           title="Email" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a class="icon-btn" href="https://github.com/ZhengyangShan"
+           title="GitHub" aria-label="GitHub" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
       </div>
+
     </section>
 
     <!-- Right: intro exactly in the style -->
