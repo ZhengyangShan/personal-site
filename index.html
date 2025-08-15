@@ -6,7 +6,9 @@
 <title>Zhengyang Shan — Boston University</title>
 <meta name="description" content="PhD student at Boston University. Fairness, interpretability, and evaluation of LLMs." />
 
-<!-- === Inline Styles (no external CSS needed) === -->
+<!-- Font Awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
 <style>
   :root{
     --bg:#ffffff; --text:#0a0a0a; --muted:#5f6570;
@@ -19,7 +21,6 @@
   body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background:var(--bg)}
   a{color:inherit}
 
-  /* Header */
   .site-header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.65);
     backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
   .header-inner{max-width:1200px;margin:0 auto; padding:0 20px; height:64px;
@@ -28,7 +29,6 @@
   .nav a{margin-left:18px; text-decoration:none; color:var(--muted)}
   .nav a:hover{color:var(--text)}
 
-  /* Hero */
   .hero{position:relative; overflow:hidden; padding:64px 0 32px}
   .waves{position:absolute; inset:0; z-index:-2;
     background: radial-gradient(1200px 400px at 15% 20%, var(--accent1), transparent 60%),
@@ -49,12 +49,13 @@
     transition:transform .35s ease}
   .avatar-wrap:hover .avatar{transform:scale(1.06)}
 
-  .name{font-size:44px; line-height:1.05; margin:10px 0 6px; font-weight:900}
+  /* ↓ name smaller */
+  .name{font-size:36px; line-height:1.1; margin:10px 0 6px; font-weight:900}
   .role{margin:0; color:var(--muted); font-weight:600}
   .org{margin:.25rem 0 0; color:var(--muted)}
   .social{display:flex; gap:12px; margin-top:18px}
   .icon-btn{display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
-    border-radius:999px; border:1px solid var(--line); background:#fff0; box-shadow:none}
+    border-radius:999px; border:1px solid var(--line); background:#fff0; box-shadow:none; font-size:20px}
   .icon-btn:hover{box-shadow:0 6px 14px rgba(0,0,0,.12)}
 
   .intro{font-size:20px; line-height:1.6}
@@ -64,26 +65,22 @@
   .h2{font-size:28px; font-weight:800; margin:22px 0 12px}
   .chips{display:flex; flex-wrap:wrap; gap:12px; padding:0; margin:0}
   .chip{list-style:none; padding:10px 16px; border-radius:999px; background:var(--chip);
-    border:1px solid var(--line); font-weight:600
+    border:1px solid var(--line); font-weight:600;}
 
-  /* Sections */
   .section{padding:34px 0}
   .container{max-width:1200px; margin:0 auto; padding:0 20px}
 
-  /* Education – emoji, no images */
-  .edu-line{display:flex; align-items:flex-start; gap:10px; padding:10px 0;
-    border-bottom:1px dashed var(--line)}
+  .edu-line{display:flex; align-items:flex-start; gap:10px; padding:10px 0; border-bottom:1px dashed var(--line)}
   .edu-line:last-child{border-bottom:none}
   .edu-emoji{font-size:22px; line-height:1.1}
   .edu-text{font-size:18px}
   .edu-text .school{font-weight:800}
 
-  /* News */
   .news-item{display:grid; grid-template-columns:140px 1fr; gap:16px;
     border:1px solid var(--line); border-radius:14px; padding:14px; background:rgba(255,255,255,.65)}
   .news-item time{color:var(--muted); white-space:nowrap}
+  .center{text-align:center;margin-top:10px}
 
-  /* Publications */
   .pub{border:1px solid var(--line); border-radius:16px; padding:14px; background:rgba(255,255,255,.65)}
   .pub-title{font-weight:700; font-size:18px; margin:0 0 6px}
   .pub-actions{display:flex; gap:10px; margin-top:8px}
@@ -95,7 +92,6 @@
   .summary-row .caret{transition:transform .25s}
   details[open] .caret{transform:rotate(90deg)}
 
-  /* Teaching cards */
   .cards{display:grid; grid-template-columns:1fr 1fr; gap:14px}
   @media (max-width:820px){ .cards{grid-template-columns:1fr} }
   .card-plain{border:1px solid var(--line); border-radius:18px; padding:14px; background:rgba(255,255,255,.65)}
@@ -120,33 +116,28 @@
 <main class="hero">
   <div class="waves" aria-hidden="true"></div>
   <div class="hero-inner">
-    <!-- Left: avatar & meta -->
+    <!-- LEFT -->
     <section class="card lift">
       <div class="avatar-wrap">
-        <!-- replace with your real path if different -->
         <img class="avatar" src="images/headshot.jpg" alt="Zhengyang Shan headshot" />
       </div>
       <h1 class="name">Zhengyang Shan</h1>
       <p class="role">PhD Student</p>
       <p class="org">Boston University (CDS)</p>
       <div class="social">
-        <a class="icon-btn" href="https://www.linkedin.com/in/zhengyang-shan-92b5381aa"
-           title="LinkedIn" aria-label="LinkedIn" target="_blank">
+        <a class="icon-btn" href="https://www.linkedin.com/in/zhengyang-shan-92b5381aa" title="LinkedIn" aria-label="LinkedIn" target="_blank">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a class="icon-btn" href="mailto:shanzy@bu.edu"
-           title="Email" aria-label="Email">
+        <a class="icon-btn" href="mailto:shanzy@bu.edu" title="Email" aria-label="Email">
           <i class="fas fa-envelope"></i>
         </a>
-        <a class="icon-btn" href="https://github.com/ZhengyangShan"
-           title="GitHub" aria-label="GitHub" target="_blank">
+        <a class="icon-btn" href="https://github.com/ZhengyangShan" title="GitHub" aria-label="GitHub" target="_blank">
           <i class="fab fa-github"></i>
         </a>
       </div>
-
     </section>
 
-    <!-- Right: intro exactly in the style -->
+    <!-- RIGHT -->
     <section class="card lift">
       <p class="intro">
         I am a PhD student in the
@@ -183,13 +174,16 @@
 <!-- News -->
 <section id="news" class="section">
   <div class="container">
-    <div class="h2">Recent News</div>
-    <div class="news-item" style="margin-bottom:10px"> 
+    <div class="h2">More exciting news coming</div>
+    <div class="news-item" style="margin-bottom:10px">
       <time>Jul 30, 2025</time>
       <div>
         <div><strong>(New)</strong> ACL 2025 camera-ready posted</div>
         <div class="muted">Our gender inclusivity paper (GIFI) is finalized.</div>
       </div>
+    </div>
+    <div class="center">
+      <a class="btn" href="#" title="See all news">See all</a>
     </div>
   </div>
 </section>
@@ -199,12 +193,12 @@
   <div class="container">
     <div class="h2">Publications</div>
 
-    <!-- Example publication block -->
+    <!-- One example entry with your requested title format -->
     <article class="pub" style="margin-bottom:12px">
       <h3 class="pub-title">
-        <a href="https://doi.org/10.1016/j.difgeo.2020.101688" target="_blank" rel="noreferrer">
-          Nonuniqueness for a Fully Nonlinear, Degenerate Elliptic Boundary-Value Problem in Conformal Geometry
-        </a>
+        Yukyung Lee, Soonwon Ka, Bokyung Son, Pilsung Kang, Jaewook Kang (2025).
+        Navigating the Path of Writing: Outline-guided Text Generation with Large Language Models.
+        NAACL 2025
       </h3>
       <details>
         <summary>
@@ -214,16 +208,19 @@
           </div>
         </summary>
         <p style="margin-top:8px">
-          <!-- Paste the real abstract here -->
-          One way to generalize the boundary Yamabe problem posed by Escobar is to ask if a given metric on a compact manifold with boundary can be conformally deformed to have vanishing $\sigma_k$-curvature in the interior and constant $H_k$-curvature on the boundary. When restricting to the closure of the positive k-cone, this is a fully nonlinear degenerate elliptic boundary value problem with fully nonlinear Robin-type boundary condition. We prove nonuniqueness for the boundary-value problem $\sigma_4$-curvature equals zero and constant $H_4$-curvature by using bifurcation results proven by Case, Moreira and Wang. Surprisingly, our construction via products of sphere and hyperbolic space only works for a finite set of dimensions.
+          <!-- paste the real abstract here -->
+          Abstract goes here. Click again to hide.
         </p>
       </details>
       <div class="pub-actions">
-        <a class="btn" href="https://doi.org/10.1016/j.difgeo.2020.101688" target="_blank" rel="noreferrer">PDF</a>
+        <a class="btn" href="https://arxiv.org/abs/XXXX.XXXXX" target="_blank" rel="noreferrer">PDF</a>
       </div>
     </article>
 
     <!-- Duplicate <article class="pub">…</article> for more papers -->
+    <div class="center">
+      <a class="btn" href="#" title="See all publications">See all</a>
+    </div>
   </div>
 </section>
 
@@ -240,7 +237,6 @@
           <li><a href="https://www.bu.edu/academics/cds/courses/cds-ds-380/" target="_blank" rel="noreferrer">CDS DS 380 — Data, Society and Ethics</a> — <em>Spring 2023</em></li>
         </ul>
       </div>
-      <!-- Add more cards if needed -->
     </div>
   </div>
 </section>
@@ -256,9 +252,7 @@
   </div>
 </footer>
 
-<!-- === Tiny inline JS (no external file needed) === -->
 <script>
-  // Set current year
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
