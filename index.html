@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Zhengyang Shan</title>
+<title>Zhengyang Shan — Boston University</title>
 <meta name="description" content="PhD student at Boston University. Fairness, interpretability, and evaluation of LLMs." />
 
 <!-- Font Awesome icons -->
@@ -14,10 +14,8 @@
     --bg:#ffffff; --text:#0a0a0a; --muted:#5f6570;
     --line:rgba(10,10,10,.08); --card:rgba(255,255,255,.72);
     --chip: rgba(255,255,255,.65); --shadow:0 10px 28px rgba(0,0,0,.08);
-    /* 绿色系 */
-    --accent1:#d1fae5; /* emerald-100 */
-    --accent2:#bbf7d0; /* green-200 */
-    --accent3:#a7f3d0; /* teal-200 */
+    /* 绿色系渐变 */
+    --accent1:#d1fae5; --accent2:#bbf7d0; --accent3:#a7f3d0;
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
@@ -72,7 +70,7 @@
   .muted{color:var(--muted); font-size:20px}
 
   .h2{font-size:28px; font-weight:800; margin:22px 0 12px}
-  /* 把 Interests / Education 标题调小 */
+  /* Interests / Education 标题调小 */
   #interests.h2, #education.h2{font-size:22px; margin-top:16px}
 
   .chips{display:flex; flex-wrap:wrap; gap:12px; padding:0; margin:0}
@@ -93,14 +91,16 @@
   .news-item{display:grid; grid-template-columns:140px 1fr; gap:16px;
     border:1px solid var(--line); border-radius:14px; padding:14px; background:rgba(255,255,255,.65)}
   .news-item time{color:var(--muted); white-space:nowrap}
+
   .center{text-align:center;margin-top:10px}
 
   /* Publications */
   .pub{border:1px solid var(--line); border-radius:16px; padding:14px; background:rgba(255,255,255,.65)}
-  .pub-title{font-weight:700; font-size:18px; margin:0 0 6px}
+  .pub-title{font-weight:400; font-style:italic; font-size:18px; margin:0 0 6px} /* 不加粗 + 斜体 */
   .pub-actions{display:flex; gap:10px; margin-top:8px}
   .btn{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:12px;
     border:1px solid var(--line); background:#fff; text-decoration:none; font-weight:600}
+
   details summary{cursor:pointer; list-style:none}
   details summary::-webkit-details-marker{display:none}
   .summary-row{display:flex; align-items:center; gap:10px}
@@ -108,7 +108,7 @@
   details[open] .caret{transform:rotate(90deg)}
 
   /* Teaching：全宽对齐，与 Publications 一样宽 */
-  .cards{display:block;}              /* 不用两列网格 */
+  .cards{display:block;}
   .card-plain{border:1px solid var(--line); border-radius:18px; padding:14px; background:rgba(255,255,255,.65)}
   .list{margin:8px 0 0 18px}
 </style>
@@ -202,9 +202,10 @@
   <div class="container">
     <div class="h2">Publications</div>
 
+    <!-- Paper 1: GIFI -->
     <article class="pub" style="margin-bottom:12px">
       <h3 class="pub-title">
-        Zhengyang Shan. Nonuniqueness for a fully nonlinear, degenerate elliptic boundary-value problem in conformal geometry. Differential Geometry and its Applications
+        Zhengyang Shan, Emily Diana, Jiawei Zhou (2025). Gender Inclusivity Fairness Index (GIFI): A Multilevel Framework for Evaluating Gender Diversity in Large Language Models. ACL 2025
       </h3>
       <details>
         <summary>
@@ -214,7 +215,29 @@
           </div>
         </summary>
         <p style="margin-top:8px">
-          One way to generalize the boundary Yamabe problem posed by Escobar is to ask if a given metric on a compact manifold with boundary can be conformally deformed to have vanishing σ_k-curvature in the interior and constant H_k-curvature on the boundary. … (abstract)
+          We present a comprehensive evaluation of gender fairness in large language models (LLMs), focusing on their ability to handle both binary and non-binary genders. While previous studies primarily focus on binary gender distinctions, we introduce the Gender Inclusivity Fairness Index (GIFI), a novel and comprehensive metric that quantifies the diverse gender inclusivity of LLMs. GIFI consists of a wide range of evaluations at different levels, from simply probing the model with respect to provided gender pronouns to testing various aspects of model generation and cognitive behaviors under different gender assumptions, revealing biases associated with varying gender identifiers. We conduct extensive evaluations with GIFI on 22 prominent open-source and proprietary LLMs of varying sizes and capabilities, discovering significant variations in LLMs’ gender inclusivity. Our study highlights the importance of improving LLMs’ inclusivity, providing a critical benchmark for future advancements in gender fairness in generative models.
+        </p>
+      </details>
+      <div class="pub-actions">
+        <a class="btn" href="https://aclanthology.org/2025.acl-long.128/" target="_blank" rel="noreferrer">PDF</a>
+        <a class="btn" href="https://github.com/ZhengyangShan/GIFI" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </article>
+
+    <!-- Paper 2: Conformal geometry -->
+    <article class="pub" style="margin-bottom:12px">
+      <h3 class="pub-title">
+        Zhengyang Shan (2020). Nonuniqueness for a fully nonlinear, degenerate elliptic boundary-value problem in conformal geometry. Differential Geometry and its Applications
+      </h3>
+      <details>
+        <summary>
+          <div class="summary-row">
+            <span class="caret">▶</span>
+            <strong>Abstract</strong>
+          </div>
+        </summary>
+        <p style="margin-top:8px">
+          One way to generalize the boundary Yamabe problem posed by Escobar is to ask if a given metric on a compact manifold with boundary can be conformally deformed to have vanishing σ_k-curvature in the interior and constant H_k-curvature on the boundary. When restricting to the closure of the positive k-cone, this is a fully nonlinear degenerate elliptic boundary value problem with fully nonlinear Robin-type boundary condition. We prove nonuniqueness for the boundary-value problem σ_4-curvature equals zero and constant H_4-curvature by using bifurcation results proven by Case, Moreira and Wang. Our construction via products of sphere and hyperbolic space only works for a finite set of dimensions.
         </p>
       </details>
       <div class="pub-actions">
