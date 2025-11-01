@@ -99,7 +99,7 @@
 
   /* News */
   .news-item{display:grid; grid-template-columns:140px 1fr; gap:16px;
-    border:1px solid var(--line); border-radius:14px; padding:14px; background:rgba(255,255,255,.65)}
+    border:1px solid var(--line); border-radius:14px; padding:14px; background:rgba(255,255,255,.65); align-items: start}
   .news-item time{color:var(--muted); white-space:nowrap}
 
   .center{text-align:center;margin-top:10px}
@@ -241,17 +241,15 @@
   <div class="container">
     <div class="h2">News</div>
 
-    <div class="news-item lift" style="margin-bottom:10px">
+    <div class="news-item" style="margin-bottom:10px">
       <time>Oct 31, 2025</time>
-      <h3 class="news-title">🧠 New Dataset Release — Global-PIQA-Nonparallel (2025)</h3>
-      <p>
-        I’m excited to have participated as a contributor to the
-        <em>Global-PIQA-Nonparallel</em> dataset — a large-scale multilingual benchmark for reasoning and commonsense evaluation.
+      <p>🧠 <strong>New Dataset Release — Global-PIQA-Nonparallel (2025)</strong>
+      I’m excited to have participated as a contributor to the <em>Global-PIQA-Nonparallel</em> dataset, 
+        a large-scale multilingual benchmark for reasoning and commonsense evaluation.
         \\
-        
         📄 <a href="https://arxiv.org/abs/2510.24081" target="_blank">arXiv Paper</a> ·
         🤗 <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel" target="_blank">Hugging Face Dataset</a> ·
-        🐦 <a href="https://x.com/mrl_workshop/status/1983562063612887093" target="_blank">Twitter / X</a> ·
+        🐦 <a href="https://x.com/mrl_workshop/status/1983562063612887093" target="_blank">Twitter/X</a> ·
         🌐 <a href="https://bsky.app/profile/mrl-workshop.bsky.social/post/3m4dsfodhcc23" target="_blank">BlueSky</a>
       </p>
     </div>
