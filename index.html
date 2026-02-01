@@ -300,7 +300,29 @@
   <div class="container">
     <div class="h2">Publications</div>
 
-    <!-- Paper 1: GIFI -->
+    <!-- Paper 1: Mechanistic -->
+    <article class="pub lift" style="margin-bottom:12px">
+      <h3 class="pub-title">
+        <span class="me">Zhengyang Shan</span>, Aaron Mueller (2026). Measuring Mechanistic Independence: Can Bias Be Removed Without Erasing Demographics? <span class="conf">European Chapter of the Association for Computational Linguistics (EACL) 2026</span>
+      </h3>
+      <details>
+        <summary>
+          <div class="summary-row">
+            <span class="caret">▶</span>
+            <strong>Abstract</strong>
+          </div>
+        </summary>
+        <p style="margin-top:8px">
+          We investigate how independent demographic bias mechanisms are from general demographic recognition in language models. Using a multi-task evaluation setup where demographics are associated with names, professions, and education levels, we measure whether models can be debiased while preserving demographic detection capabilities. We compare attribution-based and correlation-based methods for locating bias features. We find that targeted sparse autoencoder feature ablations in Gemma-2-9B reduce bias without degrading recognition performance: attribution-based ablations mitigate race and gender profession stereotypes while preserving name recognition accuracy, whereas correlation-based ablations are more effective for education bias. Qualitative analysis further reveals that removing attribution features in education tasks induces ``prior collapse'', thus increasing overall bias. This highlights the need for dimension-specific interventions. Overall, our results show that demographic bias arises from task-specific mechanisms rather than absolute demographic markers, and that mechanistic inference-time interventions can enable surgical debiasing without compromising core model capabilities.
+        </p>
+      </details>
+      <div class="pub-actions">
+        <a class="btn" href="https://arxiv.org/abs/2512.20796" target="_blank" rel="noreferrer">PDF</a>
+      </div>
+    </article>
+
+
+    <!-- Paper 2: GIFI -->
     <article class="pub lift" style="margin-bottom:12px">
       <h3 class="pub-title">
         <span class="me">Zhengyang Shan</span>, Emily Diana, Jiawei Zhou (2025). Gender Inclusivity Fairness Index (GIFI): A Multilevel Framework for Evaluating Gender Diversity in Large Language Models. <span class="conf">Association for Computational Linguistics 2025</span>
@@ -322,7 +344,7 @@
       </div>
     </article>
 
-    <!-- Paper 2: Climate Change -->
+    <!-- Paper 3: Climate Change -->
     <article class="pub lift" style="margin-bottom:12px">
       <h3 class="pub-title">
         Ge Gao, <span class="me">Zhengyang Shan</span>, James Crissman, Ekaterina Novozhilova, YuCheng Huang, Arti Ramanathan, Margrit Betke, Derry Wijaya (2025). Insights into Climate Change Narratives: Emotional Alignment and Engagement Analysis on TikTok. <span class="conf">Proceedings of the Fourth Workshop on NLP for Positive Impact (NLP4PI) 2025 <a class="award" href="https://www.bu.edu/cs/2025/08/04/hariri-ai-and-emerging-media-research-team-s-tiktok-climate-change-narrative-study-wins-best-paper-at-acl-2025-for/" target="_blank" rel="noreferrer">🏆 Best Paper Award</a> </span>.
@@ -347,7 +369,7 @@
       </div>
     </article>
 
-    <!-- Paper 3: Conformal geometry -->
+    <!-- Paper 4: Conformal geometry -->
     <article class="pub lift" style="margin-bottom:12px">
       <h3 class="pub-title">
         <span class="me">Zhengyang Shan</span> (2021). Nonuniqueness for a fully nonlinear, degenerate elliptic boundary-value problem in conformal geometry. <span class="conf">Differential Geometry and its Applications</span>
