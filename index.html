@@ -16,7 +16,6 @@
 <meta property="og:image" content="https://zhengyangshan.github.io/personal-site/images/headshot.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-  
 <!-- Font Awesome icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
@@ -80,7 +79,8 @@
   .muted{color:var(--muted); font-size:20px}
 
   .h2{font-size:28px; font-weight:800; margin:22px 0 12px}
-  /* Interests / Education 标题 */
+
+  /* Interests / Education titles */
   #interests.h2, #education.h2{font-size:22px; margin-top:16px}
 
   .chips{display:flex; flex-wrap:wrap; gap:12px; padding:0; margin:0}
@@ -95,49 +95,48 @@
   .edu-line:last-child{border-bottom:none}
   .edu-emoji{font-size:22px; line-height:1.1}
   .edu-text{font-size:18px}
-  .edu-text .school{font-weight:400;} /* 不加粗 */
+  .edu-text .school{font-weight:400;}
 
-/* News */
-.news-item {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 16px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 16px 20px;
-  background: rgba(255, 255, 255, 0.65);
-  align-items: start;        /* top-align time + content */
-}
+  /* Benchmark datasets */
+  .news-item {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 16px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.65);
+    align-items: start;
+  }
 
-.news-item time {
-  color: var(--muted);
-  white-space: nowrap;
-  margin-top: 2px;           /* slight vertical adjustment for perfect baseline alignment */
-}
+  .news-item time {
+    color: var(--muted);
+    white-space: nowrap;
+    margin-top: 2px;
+  }
 
-.news-item > div {
-  margin-top: 0;             /* remove any inherited offset */
-}
+  .news-item > div {
+    margin-top: 0;
+  }
 
-.news-title {
-  margin: 0;                 /* remove default top/bottom h3 margins */
-  font-size: 17px;  
-  line-height: 1.3;
-}
+  .news-title {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.3;
+  }
 
-.news-item p {
-  margin: 6px 0 0;           /* consistent paragraph spacing */
-}
-  
-.center {
-  text-align: center;
-  margin-top: 10px;
-}
+  .news-item p {
+    margin: 6px 0 0;
+  }
 
+  .center {
+    text-align: center;
+    margin-top: 10px;
+  }
 
   /* Publications */
   .pub{border:1px solid var(--line); border-radius:16px; padding:14px; background:rgba(255,255,255,.65)}
-  .pub-title{font-weight:400; font-size:18px; margin:0 0 6px} /* 不加粗 + 斜体 */
+  .pub-title{font-weight:400; font-size:18px; margin:0 0 6px}
   .pub-actions{display:flex; gap:10px; margin-top:8px}
   .btn{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:12px;
     border:1px solid var(--line); background:#fff; text-decoration:none; font-weight:600}
@@ -155,21 +154,22 @@
 
   .me {
     font-weight: bold;
-    color: #0056b3; /* pick a color you like */
+    color: #0056b3;
   }
+
   .award {
     font-weight: bold;
-    color: #d97706; /* golden shade */
+    color: #d97706;
     margin-left: 8px;
   }
+
   .conf {
     color: grey;
-    font-style: italic; /* optional: makes it stand out more */
+    font-style: italic;
   }
 
 </style>
 </head>
-
 
 <script type="application/ld+json">
 {
@@ -183,23 +183,22 @@
   },
   "url": "https://zhengyangshan.github.io/personal-site/",
   "image": "https://zhengyangshan.github.io/personal-site/images/headshot.jpg",
-  "sameAs": [ 
+  "sameAs": [
     "https://github.com/ZhengyangShan",
     "https://www.linkedin.com/in/zhengyang-shan-92b5381aa",
-    "https://www.bu.edu/cds-faculty/profile/zhengyang-shan/" 
+    "https://www.bu.edu/cds-faculty/profile/zhengyang-shan/"
   ],
   "knowsAbout": ["LLM fairness", "interpretability", "model evaluation", "NLP", "AI"]
 }
 </script>
 
-  
 <body>
 
 <header class="site-header">
   <div class="header-inner">
     <a class="brand" href="#top">Zhengyang Shan</a>
     <nav class="nav">
-      <a href="#news">News</a>
+      <a href="#benchmarks">Benchmark Datasets</a>
       <a href="#publications">Publications</a>
       <a href="#teaching">Teaching</a>
     </nav>
@@ -209,6 +208,7 @@
 <main class="hero">
   <div class="waves" aria-hidden="true"></div>
   <div class="hero-inner">
+
     <!-- LEFT -->
     <section class="card lift">
       <div class="avatar-wrap">
@@ -217,6 +217,7 @@
       <h1 class="name">Zhengyang Shan</h1>
       <p class="role">PhD Candidate</p>
       <p class="org">Boston University (CDS)</p>
+
       <div class="social">
         <a class="icon-btn" href="https://scholar.google.com/citations?user=aeWAG5QAAAAJ&hl=en" title="Google Scholar" aria-label="Google Scholar">
           <i class="fas fa-graduation-cap"></i>
@@ -241,7 +242,7 @@
       <p class="intro">
         I am a PhD candidate in the
         <a class="strong" href="https://www.bu.edu/cds/">Faculty of Computing and Data Sciences</a>
-        at Boston University. I work on interpretability and evaluation in large language models, 
+        at Boston University. I work on interpretability and evaluation in large language models,
         with a particular interest in understanding and mitigating bias and fairness issues in model behavior.
       </p>
 
@@ -254,35 +255,49 @@
       </ul>
 
       <div id="education" class="h2">Education</div>
+
       <div class="edu-line">
         <div class="edu-emoji">🤯</div>
-        <div class="edu-text"><span class="school">Boston University</span> — <em>PhD in the Faculty of Computing and Data Sciences</em></div>
+        <div class="edu-text">
+          <span class="school">Boston University</span> —
+          <em>PhD in the Faculty of Computing and Data Sciences</em>
+        </div>
       </div>
+
       <div class="edu-line">
         <div class="edu-emoji">🎓</div>
-        <div class="edu-text"><span class="school">University of Michigan — Ann Arbor</span> — <em>MSc in Quantitative Finance and Risk Management</em></div>
+        <div class="edu-text">
+          <span class="school">University of Michigan — Ann Arbor</span> —
+          <em>MSc in Quantitative Finance and Risk Management</em>
+        </div>
       </div>
+
       <div class="edu-line">
         <div class="edu-emoji">🎓</div>
-        <div class="edu-text"><span class="school">The Pennsylvania State University</span> — <em>BSc in Mathematics and Computational Statistics, minor in Computer Science</em></div>
+        <div class="edu-text">
+          <span class="school">The Pennsylvania State University</span> —
+          <em>BSc in Mathematics and Computational Statistics, minor in Computer Science</em>
+        </div>
       </div>
     </section>
+
   </div>
 </main>
-<!-- News -->
-<section id="news" class="section">
+
+<!-- Benchmark Datasets -->
+<section id="benchmarks" class="section">
   <div class="container">
-    <div class="h2">News</div>
+    <div class="h2">Benchmark Datasets</div>
 
     <div class="news-item lift" style="margin-bottom:10px">
-      <time>May 20, 2026</time>
+      <time>2026</time>
       <div>
-        <h3 class="news-title">New Dataset Release: ASPI Benchmark (2026)</h3>
+        <h3 class="news-title">ASPI: Ambiguous-State Prompt Injection Benchmark</h3>
         <p>
-          I’m excited to share <em>ASPI</em>, a benchmark of 728 task–attack
-          scenarios that tests whether LLM agents become more vulnerable to
-          prompt injection attacks when pausing to ask clarifying questions on
-          ambiguous tasks. 
+          <em>ASPI</em> is a benchmark of 728 task–attack scenarios for evaluating
+          whether LLM agents become more vulnerable to prompt injection attacks
+          when they pause to ask clarifying questions on ambiguous tasks.
+          I contributed to this dataset as a co-first author.
         </p>
         <p class="news-links">
           📄 <a href="https://arxiv.org/pdf/2605.17324" target="_blank">Paper</a> ·
@@ -294,13 +309,13 @@
     </div>
 
     <div class="news-item lift" style="margin-bottom:10px">
-      <time>Oct 31, 2025</time>
+      <time>2025</time>
       <div>
-        <h3 class="news-title">New Dataset Release: Global-PIQA-Nonparallel (2025)</h3>
+        <h3 class="news-title">Global-PIQA-Nonparallel: Multilingual Commonsense Reasoning Benchmark</h3>
         <p>
-          I’m excited to have participated as a contributor to the
-          <em>Global-PIQA-Nonparallel</em> dataset, a large-scale multilingual benchmark
-          for reasoning and commonsense evaluation.
+          <em>Global-PIQA-Nonparallel</em> is a large-scale multilingual benchmark
+          for reasoning and commonsense evaluation. I contributed to the dataset
+          construction and release.
         </p>
         <p class="news-links">
           📄 <a href="https://arxiv.org/abs/2510.24081" target="_blank">Paper</a> ·
@@ -310,9 +325,10 @@
         </p>
       </div>
     </div>
+
   </div>
 </section>
-  
+
 <!-- Publications -->
 <section id="publications" class="section">
   <div class="container">
@@ -321,8 +337,11 @@
     <!-- Paper 1: Mechanistic -->
     <article class="pub lift" style="margin-bottom:12px">
       <h3 class="pub-title">
-        <span class="me">Zhengyang Shan</span>, Aaron Mueller (2026). Measuring Mechanistic Independence: Can Bias Be Removed Without Erasing Demographics? <span class="conf">European Chapter of the Association for Computational Linguistics (EACL) 2026</span>
+        <span class="me">Zhengyang Shan</span>, Aaron Mueller (2026).
+        Measuring Mechanistic Independence: Can Bias Be Removed Without Erasing Demographics?
+        <span class="conf">European Chapter of the Association for Computational Linguistics (EACL) 2026</span>
       </h3>
+
       <details>
         <summary>
           <div class="summary-row">
@@ -331,20 +350,33 @@
           </div>
         </summary>
         <p style="margin-top:8px">
-          We investigate how independent demographic bias mechanisms are from general demographic recognition in language models. Using a multi-task evaluation setup where demographics are associated with names, professions, and education levels, we measure whether models can be debiased while preserving demographic detection capabilities. We compare attribution-based and correlation-based methods for locating bias features. We find that targeted sparse autoencoder feature ablations in Gemma-2-9B reduce bias without degrading recognition performance: attribution-based ablations mitigate race and gender profession stereotypes while preserving name recognition accuracy, whereas correlation-based ablations are more effective for education bias. Qualitative analysis further reveals that removing attribution features in education tasks induces ``prior collapse'', thus increasing overall bias. This highlights the need for dimension-specific interventions. Overall, our results show that demographic bias arises from task-specific mechanisms rather than absolute demographic markers, and that mechanistic inference-time interventions can enable surgical debiasing without compromising core model capabilities.
+          We investigate how independent demographic bias mechanisms are from general demographic recognition in language models.
+          Using a multi-task evaluation setup where demographics are associated with names, professions, and education levels,
+          we measure whether models can be debiased while preserving demographic detection capabilities.
+          We compare attribution-based and correlation-based methods for locating bias features.
+          We find that targeted sparse autoencoder feature ablations in Gemma-2-9B reduce bias without degrading recognition performance:
+          attribution-based ablations mitigate race and gender profession stereotypes while preserving name recognition accuracy,
+          whereas correlation-based ablations are more effective for education bias.
+          Qualitative analysis further reveals that removing attribution features in education tasks induces ``prior collapse'',
+          thus increasing overall bias. This highlights the need for dimension-specific interventions.
+          Overall, our results show that demographic bias arises from task-specific mechanisms rather than absolute demographic markers,
+          and that mechanistic inference-time interventions can enable surgical debiasing without compromising core model capabilities.
         </p>
       </details>
+
       <div class="pub-actions">
         <a class="btn" href="https://arxiv.org/abs/2512.20796" target="_blank" rel="noreferrer">PDF</a>
       </div>
     </article>
 
-
     <!-- Paper 2: GIFI -->
     <article class="pub lift" style="margin-bottom:12px">
       <h3 class="pub-title">
-        <span class="me">Zhengyang Shan</span>, Emily Diana, Jiawei Zhou (2025). Gender Inclusivity Fairness Index (GIFI): A Multilevel Framework for Evaluating Gender Diversity in Large Language Models. <span class="conf">Association for Computational Linguistics 2025</span>
+        <span class="me">Zhengyang Shan</span>, Emily Diana, Jiawei Zhou (2025).
+        Gender Inclusivity Fairness Index (GIFI): A Multilevel Framework for Evaluating Gender Diversity in Large Language Models.
+        <span class="conf">Association for Computational Linguistics 2025</span>
       </h3>
+
       <details>
         <summary>
           <div class="summary-row">
@@ -353,20 +385,39 @@
           </div>
         </summary>
         <p style="margin-top:8px">
-          We present a comprehensive evaluation of gender fairness in large language models (LLMs), focusing on their ability to handle both binary and non-binary genders. While previous studies primarily focus on binary gender distinctions, we introduce the Gender Inclusivity Fairness Index (GIFI), a novel and comprehensive metric that quantifies the diverse gender inclusivity of LLMs. GIFI consists of a wide range of evaluations at different levels, from simply probing the model with respect to provided gender pronouns to testing various aspects of model generation and cognitive behaviors under different gender assumptions, revealing biases associated with varying gender identifiers. We conduct extensive evaluations with GIFI on 22 prominent open-source and proprietary LLMs of varying sizes and capabilities, discovering significant variations in LLMs’ gender inclusivity. Our study highlights the importance of improving LLMs’ inclusivity, providing a critical benchmark for future advancements in gender fairness in generative models.
+          We present a comprehensive evaluation of gender fairness in large language models (LLMs), focusing on their ability to handle both binary and non-binary genders.
+          While previous studies primarily focus on binary gender distinctions, we introduce the Gender Inclusivity Fairness Index (GIFI),
+          a novel and comprehensive metric that quantifies the diverse gender inclusivity of LLMs.
+          GIFI consists of a wide range of evaluations at different levels, from simply probing the model with respect to provided gender pronouns
+          to testing various aspects of model generation and cognitive behaviors under different gender assumptions, revealing biases associated with varying gender identifiers.
+          We conduct extensive evaluations with GIFI on 22 prominent open-source and proprietary LLMs of varying sizes and capabilities,
+          discovering significant variations in LLMs’ gender inclusivity.
+          Our study highlights the importance of improving LLMs’ inclusivity, providing a critical benchmark for future advancements in gender fairness in generative models.
         </p>
       </details>
+
       <div class="pub-actions">
         <a class="btn" href="https://aclanthology.org/2025.acl-long.128/" target="_blank" rel="noreferrer">PDF</a>
-        <a class="btn" href="https://github.com/ZhengyangShan/GIFI" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a>
+        <a class="btn" href="https://github.com/ZhengyangShan/GIFI" target="_blank" rel="noreferrer">
+          <i class="fab fa-github"></i> GitHub
+        </a>
       </div>
     </article>
 
     <!-- Paper 3: Climate Change -->
     <article class="pub lift" style="margin-bottom:12px">
       <h3 class="pub-title">
-        Ge Gao, <span class="me">Zhengyang Shan</span>, James Crissman, Ekaterina Novozhilova, YuCheng Huang, Arti Ramanathan, Margrit Betke, Derry Wijaya (2025). Insights into Climate Change Narratives: Emotional Alignment and Engagement Analysis on TikTok. <span class="conf">Proceedings of the Fourth Workshop on NLP for Positive Impact (NLP4PI) 2025 <a class="award" href="https://www.bu.edu/cs/2025/08/04/hariri-ai-and-emerging-media-research-team-s-tiktok-climate-change-narrative-study-wins-best-paper-at-acl-2025-for/" target="_blank" rel="noreferrer">🏆 Best Paper Award</a> </span>.
+        Ge Gao, <span class="me">Zhengyang Shan</span>, James Crissman, Ekaterina Novozhilova,
+        YuCheng Huang, Arti Ramanathan, Margrit Betke, Derry Wijaya (2025).
+        Insights into Climate Change Narratives: Emotional Alignment and Engagement Analysis on TikTok.
+        <span class="conf">
+          Proceedings of the Fourth Workshop on NLP for Positive Impact (NLP4PI) 2025
+          <a class="award" href="https://www.bu.edu/cs/2025/08/04/hariri-ai-and-emerging-media-research-team-s-tiktok-climate-change-narrative-study-wins-best-paper-at-acl-2025-for/" target="_blank" rel="noreferrer">
+            🏆 Best Paper Award
+          </a>
+        </span>.
       </h3>
+
       <details>
         <summary>
           <div class="summary-row">
@@ -375,13 +426,20 @@
           </div>
         </summary>
         <p style="margin-top:8px">
-          TikTok has emerged as a key platform for discussing polarizing topics, including climate change. Despite its growing influence, there is limited research exploring how content features shape emotional alignment between video 
-          creators and audience comments, as well as their impact on user engagement. Using a combination of pretrained and fine-tuned textual and visual models, we analyzed 7,110 TikTok videos related to climate change, focusing on 
-          content features such as semantic clustering of video transcriptions, visual elements, tonal shifts, and detected emotions. (1) Our findings reveal that positive emotions and videos 
-          featuring factual content or vivid environmental visuals exhibit stronger emotional alignment. Furthermore, emotional intensity and tonal coherence in video speech are significant predictors of higher engagement levels, 
-          offering new insights into the dynamics of climate change communication on social media. (2) Our preference learning analysis reveals that comment emotions play a dominant role in predicting video shareability, 
-          with both positive and negative emotional responses acting as key drivers of content diffusion. We conclude that user engagement—particularly emotional discourse in comments—significantly shapes climate change content shareability.
+          TikTok has emerged as a key platform for discussing polarizing topics, including climate change.
+          Despite its growing influence, there is limited research exploring how content features shape emotional alignment between video
+          creators and audience comments, as well as their impact on user engagement.
+          Using a combination of pretrained and fine-tuned textual and visual models, we analyzed 7,110 TikTok videos related to climate change,
+          focusing on content features such as semantic clustering of video transcriptions, visual elements, tonal shifts, and detected emotions.
+          Our findings reveal that positive emotions and videos featuring factual content or vivid environmental visuals exhibit stronger emotional alignment.
+          Furthermore, emotional intensity and tonal coherence in video speech are significant predictors of higher engagement levels,
+          offering new insights into the dynamics of climate change communication on social media.
+          Our preference learning analysis reveals that comment emotions play a dominant role in predicting video shareability,
+          with both positive and negative emotional responses acting as key drivers of content diffusion.
+          We conclude that user engagement—particularly emotional discourse in comments—significantly shapes climate change content shareability.
+        </p>
       </details>
+
       <div class="pub-actions">
         <a class="btn" href="https://aclanthology.org/2025.nlp4pi-1.11.pdf" target="_blank" rel="noreferrer">PDF</a>
       </div>
@@ -390,8 +448,11 @@
     <!-- Paper 4: Conformal geometry -->
     <article class="pub lift" style="margin-bottom:12px">
       <h3 class="pub-title">
-        <span class="me">Zhengyang Shan</span> (2021). Nonuniqueness for a fully nonlinear, degenerate elliptic boundary-value problem in conformal geometry. <span class="conf">Differential Geometry and its Applications</span>
+        <span class="me">Zhengyang Shan</span> (2021).
+        Nonuniqueness for a fully nonlinear, degenerate elliptic boundary-value problem in conformal geometry.
+        <span class="conf">Differential Geometry and its Applications</span>
       </h3>
+
       <details>
         <summary>
           <div class="summary-row">
@@ -400,13 +461,21 @@
           </div>
         </summary>
         <p style="margin-top:8px">
-          One way to generalize the boundary Yamabe problem posed by Escobar is to ask if a given metric on a compact manifold with boundary can be conformally deformed to have vanishing σ_k-curvature in the interior and constant H_k-curvature on the boundary. When restricting to the closure of the positive k-cone, this is a fully nonlinear degenerate elliptic boundary value problem with fully nonlinear Robin-type boundary condition. We prove nonuniqueness for the boundary-value problem σ_4-curvature equals zero and constant H_4-curvature by using bifurcation results proven by Case, Moreira and Wang. Our construction via products of sphere and hyperbolic space only works for a finite set of dimensions.
+          One way to generalize the boundary Yamabe problem posed by Escobar is to ask if a given metric on a compact manifold with boundary
+          can be conformally deformed to have vanishing σ_k-curvature in the interior and constant H_k-curvature on the boundary.
+          When restricting to the closure of the positive k-cone, this is a fully nonlinear degenerate elliptic boundary value problem
+          with fully nonlinear Robin-type boundary condition.
+          We prove nonuniqueness for the boundary-value problem σ_4-curvature equals zero and constant H_4-curvature by using bifurcation results
+          proven by Case, Moreira and Wang.
+          Our construction via products of sphere and hyperbolic space only works for a finite set of dimensions.
         </p>
       </details>
+
       <div class="pub-actions">
         <a class="btn" href="https://www.sciencedirect.com/science/article/pii/S0926224520300978" target="_blank" rel="noreferrer">PDF</a>
       </div>
     </article>
+
   </div>
 </section>
 
@@ -414,24 +483,44 @@
 <section id="teaching" class="section">
   <div class="container">
     <div class="h2">Teaching Experience</div>
+
     <div class="cards">
       <div class="card-plain lift">
         <p style="margin:0;font-weight:800">📚 Boston University</p>
         <ul class="list">
-          <li><a href="https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/" target="_blank" rel="noreferrer">RISE Practicum in Data Science</a> — <em>Summer 2025</em></li>
-          <li><a href="https://www.bu.edu/academics/cds/courses/cds-ds-340/" target="_blank" rel="noreferrer">CDS DS 340 — Introduction to Machine Learning and AI</a> — <em>Fall 2024 &amp; Spring 2025</em></li>
           <li>
-            <a href="https://www.bu.edu/academics/cds/courses/cds-ds-380/" target="_blank" rel="noreferrer">CDS DS 380 — Data, Society and Ethics</a> — <em>Spring 2023</em><br>
+            <a href="https://www.bu.edu/summer/high-school-programs/rise-internship-practicum/" target="_blank" rel="noreferrer">
+              RISE Practicum in Data Science
+            </a>
+            — <em>Summer 2025</em>
+          </li>
+
+          <li>
+            <a href="https://www.bu.edu/academics/cds/courses/cds-ds-340/" target="_blank" rel="noreferrer">
+              CDS DS 340 — Introduction to Machine Learning and AI
+            </a>
+            — <em>Fall 2024 &amp; Spring 2025</em>
+          </li>
+
+          <li>
+            <a href="https://www.bu.edu/academics/cds/courses/cds-ds-380/" target="_blank" rel="noreferrer">
+              CDS DS 380 — Data, Society and Ethics
+            </a>
+            — <em>Spring 2023</em><br>
             <span style="color: var(--muted); font-size: 16px;">
-              Participated in the development of the <a href="https://www.bu.edu/cds-faculty/culture-community/gaia-policy/" target="_blank" rel="noreferrer">Gaia Policy</a> on responsible AI and data ethics.
+              Participated in the development of the
+              <a href="https://www.bu.edu/cds-faculty/culture-community/gaia-policy/" target="_blank" rel="noreferrer">
+                Gaia Policy
+              </a>
+              on responsible AI and data ethics.
             </span>
           </li>
         </ul>
       </div>
     </div>
+
   </div>
 </section>
-
 
 <footer class="section" style="border-top:1px solid var(--line);">
   <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
@@ -447,5 +536,6 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
