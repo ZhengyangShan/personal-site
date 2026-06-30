@@ -97,7 +97,14 @@
   .edu-text{font-size:18px}
   .edu-text .school{font-weight:400;}
 
-  /* Benchmark datasets */
+  /* Benchmark datasets and news */
+  .benchmark-item {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.65);
+  }
+
   .news-item {
     display: grid;
     grid-template-columns: 140px 1fr;
@@ -198,6 +205,7 @@
   <div class="header-inner">
     <a class="brand" href="#top">Zhengyang Shan</a>
     <nav class="nav">
+      <a href="#news">News</a>
       <a href="#benchmarks">Benchmark Datasets</a>
       <a href="#publications">Publications</a>
       <a href="#teaching">Teaching</a>
@@ -241,14 +249,18 @@
     <section class="card lift">
       <p class="intro">
         I am a PhD candidate in the
-        <a class="strong" href="https://www.bu.edu/cds/">Faculty of Computing and Data Sciences</a>
-        at Boston University. I work on interpretability and evaluation in large language models,
-        with a particular interest in understanding and mitigating bias and fairness issues in model behavior.
+        <a class="strong" href="https://www.bu.edu/cds/">Faculty of Computing &amp; Data Sciences</a>
+        at Boston University and currently an ML Research Intern at
+        <a class="strong" href="https://labs.scale.com" target="_blank" rel="noreferrer">Scale AI</a>.
+        My research focuses on large language model evaluation, interpretability, and AI safety,
+        with particular interests in understanding model behavior, mitigating bias and fairness issues,
+        and improving the reliability of agentic AI systems.
       </p>
 
       <div id="interests" class="h2">Interests</div>
       <ul class="chips" role="list">
         <li class="chip">LLM Fairness & Inclusivity</li>
+        <li class="chip">AI Safety</li>
         <li class="chip">Interpretability</li>
         <li class="chip">Evaluation</li>
         <li class="chip">LLMs Personalization</li>
@@ -284,13 +296,28 @@
   </div>
 </main>
 
+<!-- News -->
+<section id="news" class="section">
+  <div class="container">
+    <div class="h2">News</div>
+
+    <div class="news-item lift" style="margin-bottom:10px">
+      <time>2026</time>
+      <div>
+        <h3 class="news-title">More exciting news coming soon!</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <!-- Benchmark Datasets -->
 <section id="benchmarks" class="section">
   <div class="container">
     <div class="h2">Benchmark Datasets</div>
 
-    <div class="news-item lift" style="margin-bottom:10px">
-      <time>2026</time>
+    <div class="benchmark-item lift" style="margin-bottom:10px">
       <div>
         <h3 class="news-title">ASPI: Ambiguous-State Prompt Injection Benchmark</h3>
         <p>
@@ -308,8 +335,7 @@
       </div>
     </div>
 
-    <div class="news-item lift" style="margin-bottom:10px">
-      <time>2025</time>
+    <div class="benchmark-item lift" style="margin-bottom:10px">
       <div>
         <h3 class="news-title">Global-PIQA-Nonparallel: Multilingual Commonsense Reasoning Benchmark</h3>
         <p>
