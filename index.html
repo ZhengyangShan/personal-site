@@ -7,7 +7,6 @@
 <meta name="description" content="PhD Candidate at Boston University. Fairness, interpretability, and evaluation of LLMs." />
 <meta name="keywords" content="Zhengyang Shan, Boston University, PhD">
 <link rel="canonical" href="https://zhengyangshan.github.io/personal-site/" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐑</text></svg>">
 
 <!-- Open Graph / Twitter -->
 <meta property="og:type" content="website">
@@ -20,91 +19,117 @@
 <!-- Font Awesome icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
+<!-- Modern web font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%90%91%3C/text%3E%3C/svg%3E">
+
 <style>
   :root{
-    --bg:#ffffff; --text:#0a0a0a; --muted:#5f6570;
-    --line:rgba(10,10,10,.08); --card:rgba(255,255,255,.72);
-    --chip: rgba(255,255,255,.65); --shadow:0 10px 28px rgba(0,0,0,.08);
+    --bg:#ffffff; --text:#0f172a; --muted:#64748b;
+    --line:rgba(15,23,42,.09); --card:rgba(255,255,255,.78);
+    --chip: rgba(255,255,255,.72); --shadow:0 14px 36px rgba(15,23,42,.08);
+    --brand:#059669; --brand-dark:#047857; --brand-soft:#ecfdf5;
     --accent1:#d1fae5; --accent2:#bbf7d0; --accent3:#a7f3d0;
+    --soft:#f8fafc;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0}
-  body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background:var(--bg)}
-  a{color:inherit}
+  html,body{margin:0;padding:0; scroll-behavior:smooth}
+  body{font-family:"Plus Jakarta Sans", Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--text); background:var(--bg); line-height:1.55}
+  a{color:var(--brand); text-underline-offset:3px}
+  a:hover{color:var(--brand-dark)}
 
   /* Header */
-  .site-header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.65);
-    backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
-  .header-inner{max-width:1200px;margin:0 auto; padding:0 20px; height:64px;
+  .site-header{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.72);
+    backdrop-filter:blur(14px); border-bottom:1px solid var(--line)}
+  .header-inner{max-width:1200px;margin:0 auto; padding:0 20px; min-height:64px;
     display:flex; align-items:center; justify-content:space-between}
-  .brand{font-weight:800; text-decoration:none; letter-spacing:.2px}
-  .nav a{margin-left:18px; text-decoration:none; color:var(--muted)}
-  .nav a:hover{color:var(--text)}
+  .brand{font-weight:800; text-decoration:none; letter-spacing:.1px; color:var(--text)}
+  .nav a{margin-left:18px; text-decoration:none; color:var(--muted); font-size:14px; font-weight:650}
+  .nav a:hover{color:var(--brand)}
+  @media (max-width:720px){ .header-inner{align-items:flex-start; flex-direction:column; padding:12px 20px}.nav{display:flex; flex-wrap:wrap; gap:10px}.nav a{margin-left:0} }
 
   /* Hero */
-  .hero{position:relative; overflow:hidden; padding:64px 0 32px}
+  .hero{position:relative; overflow:hidden; padding:68px 0 38px}
   .waves{position:absolute; inset:0; z-index:-2;
-    background: radial-gradient(1200px 420px at 15% 25%, var(--accent1), transparent 60%),
-               radial-gradient(1200px 460px at 85% 30%, var(--accent2), transparent 60%),
-               linear-gradient(120deg, #ecfdf5, #dcfce7, #d1fae5)}
+    background: radial-gradient(1000px 420px at 10% 20%, var(--accent1), transparent 62%),
+               radial-gradient(1050px 460px at 88% 18%, var(--accent2), transparent 60%),
+               linear-gradient(135deg, #f0fdf4, #dcfce7 46%, #ecfdf5)}
   .hero-inner{max-width:1200px; margin:0 auto; padding:0 20px;
-    display:grid; grid-template-columns:360px 1fr; gap:28px}
+    display:grid; grid-template-columns:340px 1fr; gap:28px; align-items:stretch}
   @media (max-width:980px){ .hero-inner{grid-template-columns:1fr} }
 
   /* Cards */
   .card{background:var(--card); border:1px solid var(--line); border-radius:28px;
-    box-shadow:var(--shadow); padding:22px}
-  .lift{transition:transform .25s cubic-bezier(.2,.6,.2,1), box-shadow .25s}
-  .lift:hover{transform:translateY(-4px) scale(1.01); box-shadow:0 16px 40px rgba(0,0,0,.12)}
+    box-shadow:var(--shadow); padding:24px}
+  .profile-card{display:flex; flex-direction:column; justify-content:center}
+  .intro-card{padding:30px 32px}
+  .lift{transition:transform .25s cubic-bezier(.2,.6,.2,1), box-shadow .25s, border-color .25s}
+  .lift:hover{transform:translateY(-4px); box-shadow:0 18px 46px rgba(15,23,42,.12); border-color:rgba(5,150,105,.22)}
 
   /* Avatar */
   .avatar-wrap{width:210px; height:210px; border-radius:999px; overflow:hidden;
-    border:10px solid rgba(255,255,255,.8); margin:6px auto 14px}
+    border:10px solid rgba(255,255,255,.82); margin:6px auto 16px}
   .avatar{width:100%; height:100%; object-fit:cover; transform:scale(1);
     transition:transform .35s ease}
   .avatar-wrap:hover .avatar{transform:scale(1.06)}
 
   /* Text sizes */
-  .name{font-size:36px; line-height:1.1; margin:10px 0 6px; font-weight:900}
-  .role{margin:0; color:var(--muted); font-weight:600}
-  .org{margin:.25rem 0 0; color:var(--muted)}
+  .name{font-size:32px; line-height:1.1; margin:10px 0 6px; font-weight:800; letter-spacing:-.03em}
+  .role{margin:0; color:var(--muted); font-weight:700}
+  .org{margin:.25rem 0 0; color:var(--muted); font-size:15px}
+  .eyebrow{display:inline-flex; align-items:center; width:max-content; max-width:100%; padding:8px 12px;
+    border-radius:999px; background:rgba(236,253,245,.9); color:var(--brand-dark);
+    border:1px solid rgba(5,150,105,.18); font-size:13px; font-weight:800; letter-spacing:.02em; margin-bottom:14px}
 
   /* Social icons */
-  .social{display:flex; gap:12px; margin-top:18px}
+  .social{display:flex; gap:12px; margin-top:20px}
   .icon-btn{display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
-    border-radius:999px; border:1px solid var(--line); background:#fff0; box-shadow:none; font-size:20px}
-  .icon-btn:hover{box-shadow:0 6px 14px rgba(0,0,0,.12)}
+    border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.55); box-shadow:none; font-size:20px; color:var(--text); text-decoration:none}
+  .icon-btn:hover{box-shadow:0 8px 18px rgba(15,23,42,.12); color:var(--brand); border-color:rgba(5,150,105,.24)}
 
-  .intro{font-size:20px; line-height:1.6}
-  .intro .strong{font-weight:800}
-  .muted{color:var(--muted); font-size:20px}
+  .intro{font-size:19px; line-height:1.68; margin:0}
+  .intro .strong{font-weight:800; color:var(--brand-dark); text-decoration:none; border-bottom:1px solid rgba(5,150,105,.28)}
+  .muted{color:var(--muted); font-size:18px}
 
-  .h2{font-size:28px; font-weight:800; margin:22px 0 12px}
+  .h2{font-size:28px; font-weight:800; margin:0 0 14px; letter-spacing:-.025em}
 
   /* Interests / Education titles */
-  #interests.h2, #education.h2{font-size:22px; margin-top:16px}
+  #interests.h2, #education.h2{font-size:19px; margin-top:20px; margin-bottom:10px}
 
-  .chips{display:flex; flex-wrap:wrap; gap:12px; padding:0; margin:0}
-  .chip{list-style:none; padding:10px 16px; border-radius:999px; background:var(--chip);
-    border:1px solid var(--line); font-weight:600;}
+  .chips{display:flex; flex-wrap:nowrap; gap:8px; padding:0; margin:0}
+  .chip{list-style:none; padding:7px 10px; border-radius:999px; background:rgba(255,255,255,.7);
+    border:1px solid var(--line); font-weight:700; font-size:13px; white-space:nowrap; color:#334155}
+  @media (max-width:720px){ .chips{flex-wrap:wrap;} }
 
-  .section{padding:34px 0}
+  .section{padding:42px 0}
   .container{max-width:1200px; margin:0 auto; padding:0 20px}
+  #benchmarks, #teaching{background:linear-gradient(180deg, var(--soft), #ffffff)}
 
   /* Education lines */
-  .edu-line{display:flex; align-items:flex-start; gap:10px; padding:10px 0; border-bottom:1px dashed var(--line)}
+  .edu-line{display:flex; align-items:flex-start; gap:8px; padding:7px 0; border-bottom:1px dashed var(--line)}
   .edu-line:last-child{border-bottom:none}
-  .edu-emoji{font-size:22px; line-height:1.1}
-  .edu-text{font-size:18px}
-  .edu-text .school{font-weight:400;}
+  .edu-emoji{font-size:17px; line-height:1.3}
+  .edu-text{font-size:15px; color:#334155}
+  .edu-text .school{font-weight:650; color:var(--text)}
 
   /* Benchmark datasets and news */
+  .benchmark-grid{display:grid; grid-template-columns:1fr; gap:14px; max-width:900px}
+  @media (max-width:860px){ .benchmark-grid{grid-template-columns:1fr} }
   .benchmark-item {
     border: 1px solid var(--line);
-    border-radius: 14px;
-    padding: 16px 20px;
-    background: rgba(255, 255, 255, 0.65);
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.82);
   }
+  .benchmark-title{margin:0 0 8px; font-size:19px; line-height:1.3; letter-spacing:-.015em}
+  .benchmark-desc{margin:10px 0 0; color:#475569; font-size:15px}
+  .tags{display:flex; flex-wrap:wrap; gap:7px; margin:10px 0 4px}
+  .tag{font-size:12px; font-weight:750; color:var(--brand-dark); background:var(--brand-soft); border:1px solid rgba(5,150,105,.15); border-radius:999px; padding:5px 8px}
+  .link-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
 
   .news-item {
     display: grid;
@@ -143,36 +168,42 @@
   }
 
   /* Publications */
-  .pub{border:1px solid var(--line); border-radius:16px; padding:14px; background:rgba(255,255,255,.65)}
-  .pub-title{font-weight:400; font-size:18px; margin:0 0 6px}
-  .pub-actions{display:flex; gap:10px; margin-top:8px}
-  .btn{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:12px;
-    border:1px solid var(--line); background:#fff; text-decoration:none; font-weight:600}
+  .pub{border:1px solid var(--line); border-radius:20px; padding:20px; background:rgba(255,255,255,.76); margin-bottom:14px}
+  .pub-title{font-weight:800; font-size:19px; line-height:1.32; letter-spacing:-.018em; margin:0 0 8px; color:var(--text)}
+  .pub-authors{margin:0 0 5px; color:#475569; font-size:15px}
+  .pub-venue{margin:0; color:var(--muted); font-size:14px; font-style:italic}
+  .pub-actions{display:flex; flex-wrap:wrap; gap:9px; margin-top:13px}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:7px 11px; border-radius:999px;
+    border:1px solid rgba(5,150,105,.22); background:#fff; text-decoration:none; font-weight:750; font-size:13px; color:var(--brand-dark)}
+  .btn:hover{background:var(--brand-soft); border-color:rgba(5,150,105,.35); color:var(--brand-dark)}
 
+  details{margin-top:12px}
   details summary{cursor:pointer; list-style:none}
   details summary::-webkit-details-marker{display:none}
-  .summary-row{display:flex; align-items:center; gap:10px}
+  .summary-row{display:flex; align-items:center; gap:8px; color:var(--brand-dark); font-size:14px}
   .summary-row .caret{transition:transform .25s}
   details[open] .caret{transform:rotate(90deg)}
+  .abstract-text{margin-top:8px; color:#475569; font-size:15px}
 
-  .cards{display:block;}
-  .card-plain{border:1px solid var(--line); border-radius:18px; padding:14px; background:rgba(255,255,255,.65)}
+  .cards{display:block}
+  .card-plain{border:1px solid var(--line); border-radius:18px; padding:16px; background:rgba(255,255,255,.76)}
   .list{margin:8px 0 0 18px}
-  .teaching a {text-decoration: none;}
+  .teaching a {text-decoration: none}
 
   .me {
-    font-weight: bold;
-    color: #0056b3;
+    font-weight: 800;
+    color: var(--brand-dark);
   }
 
   .award {
-    font-weight: bold;
+    font-weight: 800;
     color: #d97706;
     margin-left: 8px;
+    text-decoration:none;
   }
 
   .conf {
-    color: grey;
+    color: var(--muted);
     font-style: italic;
   }
 
@@ -219,7 +250,7 @@
   <div class="hero-inner">
 
     <!-- LEFT -->
-    <section class="card lift">
+    <section class="card lift profile-card">
       <div class="avatar-wrap">
         <img class="avatar" src="images/headshot.jpg" alt="Zhengyang Shan headshot" />
       </div>
@@ -247,7 +278,7 @@
     </section>
 
     <!-- RIGHT -->
-    <section class="card lift">
+    <section class="card lift intro-card">
       <p class="intro">
         I am a PhD candidate in the
         <a class="strong" href="https://www.bu.edu/cds/">Faculty of Computing &amp; Data Sciences</a>
@@ -318,39 +349,45 @@
   <div class="container">
     <div class="h2">Benchmark Datasets</div>
 
-    <div class="benchmark-item lift" style="margin-bottom:10px">
-      <div>
-        <h3 class="news-title">ASPI: Ambiguous-State Prompt Injection Benchmark</h3>
-        <p>
-          <em>ASPI</em> is a benchmark of 728 task–attack scenarios for evaluating
-          whether LLM agents become more vulnerable to prompt injection attacks
-          when they pause to ask clarifying questions on ambiguous tasks.
+    <div class="benchmark-grid">
+      <article class="benchmark-item lift">
+        <h3 class="benchmark-title">ASPI: Ambiguous-State Prompt Injection Benchmark</h3>
+        <div class="tags">
+          <span class="tag">Prompt Injection</span>
+          <span class="tag">LLM Agents</span>
+          <span class="tag">AI Safety</span>
+        </div>
+        <p class="benchmark-desc">
+          A benchmark of 728 task–attack scenarios for evaluating whether LLM agents become
+          more vulnerable to prompt injection when they ask clarifying questions on ambiguous tasks.
           I contributed to this dataset as a co-first author.
         </p>
-        <p class="news-links">
-          📄 <a href="https://arxiv.org/pdf/2605.17324" target="_blank">Paper</a> ·
-          💻 <a href="https://github.com/scaleapi/aspi" target="_blank">GitHub</a> ·
-          🤗 <a href="https://huggingface.co/datasets/ScaleAI/aspi" target="_blank">Dataset</a> ·
-          🌐 <a href="https://labs.scale.com/papers/aspi" target="_blank">Post</a>
-        </p>
-      </div>
-    </div>
+        <div class="link-row">
+          <a class="btn" href="https://arxiv.org/pdf/2605.17324" target="_blank" rel="noreferrer">📄 Paper</a>
+          <a class="btn" href="https://github.com/scaleapi/aspi" target="_blank" rel="noreferrer">💻 GitHub</a>
+          <a class="btn" href="https://huggingface.co/datasets/ScaleAI/aspi" target="_blank" rel="noreferrer">🤗 Dataset</a>
+          <a class="btn" href="https://labs.scale.com/papers/aspi" target="_blank" rel="noreferrer">🌐 Post</a>
+        </div>
+      </article>
 
-    <div class="benchmark-item lift" style="margin-bottom:10px">
-      <div>
-        <h3 class="news-title">Global-PIQA-Nonparallel: Multilingual Commonsense Reasoning Benchmark</h3>
-        <p>
-          <em>Global-PIQA-Nonparallel</em> is a large-scale multilingual benchmark
-          for reasoning and commonsense evaluation. I contributed to the dataset
-          construction and release.
+      <article class="benchmark-item lift">
+        <h3 class="benchmark-title">Global-PIQA-Nonparallel: Multilingual Commonsense Reasoning Benchmark</h3>
+        <div class="tags">
+          <span class="tag">Multilingual</span>
+          <span class="tag">Commonsense Reasoning</span>
+          <span class="tag">Evaluation</span>
+        </div>
+        <p class="benchmark-desc">
+          A large-scale multilingual benchmark for reasoning and commonsense evaluation.
+          I contributed to the dataset construction and release.
         </p>
-        <p class="news-links">
-          📄 <a href="https://arxiv.org/abs/2510.24081" target="_blank">Paper</a> ·
-          🤗 <a href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel" target="_blank">Dataset</a> ·
-          🐦 <a href="https://x.com/mrl_workshop/status/1983562063612887093" target="_blank">Twitter/X</a> ·
-          🌐 <a href="https://bsky.app/profile/mrl-workshop.bsky.social/post/3m4dsfodhcc23" target="_blank">BlueSky</a>
-        </p>
-      </div>
+        <div class="link-row">
+          <a class="btn" href="https://arxiv.org/abs/2510.24081" target="_blank" rel="noreferrer">📄 Paper</a>
+          <a class="btn" href="https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel" target="_blank" rel="noreferrer">🤗 Dataset</a>
+          <a class="btn" href="https://x.com/mrl_workshop/status/1983562063612887093" target="_blank" rel="noreferrer">🐦 Twitter/X</a>
+          <a class="btn" href="https://bsky.app/profile/mrl-workshop.bsky.social/post/3m4dsfodhcc23" target="_blank" rel="noreferrer">🌐 BlueSky</a>
+        </div>
+      </article>
     </div>
 
   </div>
@@ -362,12 +399,14 @@
     <div class="h2">Publications</div>
 
     <!-- Paper 1: Mechanistic -->
-    <article class="pub lift" style="margin-bottom:12px">
-      <h3 class="pub-title">
-        <span class="me">Zhengyang Shan</span>, Aaron Mueller (2026).
-        Measuring Mechanistic Independence: Can Bias Be Removed Without Erasing Demographics?
-        <span class="conf">European Chapter of the Association for Computational Linguistics (EACL) 2026</span>
-      </h3>
+    <article class="pub lift">
+      <h3 class="pub-title">Measuring Mechanistic Independence: Can Bias Be Removed Without Erasing Demographics?</h3>
+      <p class="pub-authors"><span class="me">Zhengyang Shan</span>, Aaron Mueller</p>
+      <p class="pub-venue">European Chapter of the Association for Computational Linguistics (EACL), 2026</p>
+
+      <div class="pub-actions">
+        <a class="btn" href="https://arxiv.org/abs/2512.20796" target="_blank" rel="noreferrer">PDF</a>
+      </div>
 
       <details>
         <summary>
@@ -376,7 +415,7 @@
             <strong>Abstract</strong>
           </div>
         </summary>
-        <p style="margin-top:8px">
+        <p class="abstract-text">
           We investigate how independent demographic bias mechanisms are from general demographic recognition in language models.
           Using a multi-task evaluation setup where demographics are associated with names, professions, and education levels,
           we measure whether models can be debiased while preserving demographic detection capabilities.
@@ -390,19 +429,18 @@
           and that mechanistic inference-time interventions can enable surgical debiasing without compromising core model capabilities.
         </p>
       </details>
-
-      <div class="pub-actions">
-        <a class="btn" href="https://arxiv.org/abs/2512.20796" target="_blank" rel="noreferrer">PDF</a>
-      </div>
     </article>
 
     <!-- Paper 2: GIFI -->
-    <article class="pub lift" style="margin-bottom:12px">
-      <h3 class="pub-title">
-        <span class="me">Zhengyang Shan</span>, Emily Diana, Jiawei Zhou (2025).
-        Gender Inclusivity Fairness Index (GIFI): A Multilevel Framework for Evaluating Gender Diversity in Large Language Models.
-        <span class="conf">Association for Computational Linguistics 2025</span>
-      </h3>
+    <article class="pub lift">
+      <h3 class="pub-title">Gender Inclusivity Fairness Index (GIFI): A Multilevel Framework for Evaluating Gender Diversity in Large Language Models</h3>
+      <p class="pub-authors"><span class="me">Zhengyang Shan</span>, Emily Diana, Jiawei Zhou</p>
+      <p class="pub-venue">Association for Computational Linguistics (ACL), 2025</p>
+
+      <div class="pub-actions">
+        <a class="btn" href="https://aclanthology.org/2025.acl-long.128/" target="_blank" rel="noreferrer">PDF</a>
+        <a class="btn" href="https://github.com/ZhengyangShan/GIFI" target="_blank" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a>
+      </div>
 
       <details>
         <summary>
@@ -411,7 +449,7 @@
             <strong>Abstract</strong>
           </div>
         </summary>
-        <p style="margin-top:8px">
+        <p class="abstract-text">
           We present a comprehensive evaluation of gender fairness in large language models (LLMs), focusing on their ability to handle both binary and non-binary genders.
           While previous studies primarily focus on binary gender distinctions, we introduce the Gender Inclusivity Fairness Index (GIFI),
           a novel and comprehensive metric that quantifies the diverse gender inclusivity of LLMs.
@@ -422,28 +460,19 @@
           Our study highlights the importance of improving LLMs’ inclusivity, providing a critical benchmark for future advancements in gender fairness in generative models.
         </p>
       </details>
-
-      <div class="pub-actions">
-        <a class="btn" href="https://aclanthology.org/2025.acl-long.128/" target="_blank" rel="noreferrer">PDF</a>
-        <a class="btn" href="https://github.com/ZhengyangShan/GIFI" target="_blank" rel="noreferrer">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
     </article>
 
     <!-- Paper 3: Climate Change -->
-    <article class="pub lift" style="margin-bottom:12px">
-      <h3 class="pub-title">
-        Ge Gao, <span class="me">Zhengyang Shan</span>, James Crissman, Ekaterina Novozhilova,
-        YuCheng Huang, Arti Ramanathan, Margrit Betke, Derry Wijaya (2025).
-        Insights into Climate Change Narratives: Emotional Alignment and Engagement Analysis on TikTok.
-        <span class="conf">
-          Proceedings of the Fourth Workshop on NLP for Positive Impact (NLP4PI) 2025
-          <a class="award" href="https://www.bu.edu/cs/2025/08/04/hariri-ai-and-emerging-media-research-team-s-tiktok-climate-change-narrative-study-wins-best-paper-at-acl-2025-for/" target="_blank" rel="noreferrer">
-            🏆 Best Paper Award
-          </a>
-        </span>.
-      </h3>
+    <article class="pub lift">
+      <h3 class="pub-title">Insights into Climate Change Narratives: Emotional Alignment and Engagement Analysis on TikTok</h3>
+      <p class="pub-authors">Ge Gao, <span class="me">Zhengyang Shan</span>, James Crissman, Ekaterina Novozhilova, YuCheng Huang, Arti Ramanathan, Margrit Betke, Derry Wijaya</p>
+      <p class="pub-venue">Fourth Workshop on NLP for Positive Impact (NLP4PI), 2025
+        <a class="award" href="https://www.bu.edu/cs/2025/08/04/hariri-ai-and-emerging-media-research-team-s-tiktok-climate-change-narrative-study-wins-best-paper-at-acl-2025-for/" target="_blank" rel="noreferrer">🏆 Best Paper Award</a>
+      </p>
+
+      <div class="pub-actions">
+        <a class="btn" href="https://aclanthology.org/2025.nlp4pi-1.11.pdf" target="_blank" rel="noreferrer">PDF</a>
+      </div>
 
       <details>
         <summary>
@@ -452,7 +481,7 @@
             <strong>Abstract</strong>
           </div>
         </summary>
-        <p style="margin-top:8px">
+        <p class="abstract-text">
           TikTok has emerged as a key platform for discussing polarizing topics, including climate change.
           Despite its growing influence, there is limited research exploring how content features shape emotional alignment between video
           creators and audience comments, as well as their impact on user engagement.
@@ -466,19 +495,17 @@
           We conclude that user engagement—particularly emotional discourse in comments—significantly shapes climate change content shareability.
         </p>
       </details>
-
-      <div class="pub-actions">
-        <a class="btn" href="https://aclanthology.org/2025.nlp4pi-1.11.pdf" target="_blank" rel="noreferrer">PDF</a>
-      </div>
     </article>
 
     <!-- Paper 4: Conformal geometry -->
-    <article class="pub lift" style="margin-bottom:12px">
-      <h3 class="pub-title">
-        <span class="me">Zhengyang Shan</span> (2021).
-        Nonuniqueness for a fully nonlinear, degenerate elliptic boundary-value problem in conformal geometry.
-        <span class="conf">Differential Geometry and its Applications</span>
-      </h3>
+    <article class="pub lift">
+      <h3 class="pub-title">Nonuniqueness for a Fully Nonlinear, Degenerate Elliptic Boundary-Value Problem in Conformal Geometry</h3>
+      <p class="pub-authors"><span class="me">Zhengyang Shan</span></p>
+      <p class="pub-venue">Differential Geometry and its Applications, 2021</p>
+
+      <div class="pub-actions">
+        <a class="btn" href="https://www.sciencedirect.com/science/article/pii/S0926224520300978" target="_blank" rel="noreferrer">PDF</a>
+      </div>
 
       <details>
         <summary>
@@ -487,7 +514,7 @@
             <strong>Abstract</strong>
           </div>
         </summary>
-        <p style="margin-top:8px">
+        <p class="abstract-text">
           One way to generalize the boundary Yamabe problem posed by Escobar is to ask if a given metric on a compact manifold with boundary
           can be conformally deformed to have vanishing σ_k-curvature in the interior and constant H_k-curvature on the boundary.
           When restricting to the closure of the positive k-cone, this is a fully nonlinear degenerate elliptic boundary value problem
@@ -497,10 +524,6 @@
           Our construction via products of sphere and hyperbolic space only works for a finite set of dimensions.
         </p>
       </details>
-
-      <div class="pub-actions">
-        <a class="btn" href="https://www.sciencedirect.com/science/article/pii/S0926224520300978" target="_blank" rel="noreferrer">PDF</a>
-      </div>
     </article>
 
   </div>
